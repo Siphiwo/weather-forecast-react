@@ -1,10 +1,12 @@
 Weather Forcast App
  - Create 7 cards to display summary of weather
  - Click card to display more information about weather on specific day
+ - API key: ba1c264a68aee00bc2a81210b7f10c26
  
  API url: api.openweathermap.org/data/2.5/forecast?q={city name},{state code},{country code}&appid={API key}&units=metric&cnt=7
  Icon url: https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${weather[0]["icon"]}.svg`
   - Pass through icon code recieved from main api
+  Momentjs for time formatting
 
  Bonus
 - Add "allow location" feature to get users current location and display forcast
