@@ -3,6 +3,7 @@ import DetailCard from "./components/DetailCard";
 import Header from "./components/Header";
 
 import moment from 'moment'
+import SummaryCard from "./components/SummaryCard";
 function App() {
   const API_KEY = 'ba1c264a68aee00bc2a81210b7f10c26'
 
@@ -35,6 +36,7 @@ function App() {
   }
 
   const myIP = (location) => {
+    console.log(location)
     const {latitude, longitude} = location.coords
     getWeather([latitude, longitude])
   }
@@ -90,20 +92,11 @@ function App() {
                 <h1 className="text-4xl text-gray-800 mb-4 mt-10">Tomorrow</h1>
                 <ul className="grid grid-cols-2 gap-2">
                   {weatherData.list.map( (days, index) => {
-                    let day_icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${days.weather[0]["icon"]}.svg`
                     if(index > 0){
-                    return (<li className="container p-4 flex items-center justify-center bg-gray-200 rounded-lg my-auto mr-1" key={index}>
-                        <div className="my-auto">
-                            <p className="font-bold text-3xl text-pink-600 mb-2">{Math.round(days.main.temp)}&deg;C</p>
-                            <p className="text-2xl text-gray-800 tracking-widest">{days.weather[0].main}
-                                <img src={day_icon} className="w-1/4 inline" />
-                            </p>
-                            <p className="text-gray-400 text-xs uppercase tracking-widest">{days.weather[0].description}</p>
-                            <p className="tracking-wider">{moment(days.dt_txt).format("dddd hh:mm")}am</p>
-                        </div>
-                    </li>)
-                    }
-                    
+                    return (
+                      <SummaryCard key={index} day={days} />
+                    )
+                  }
                   })}
                 </ul>
               </>
