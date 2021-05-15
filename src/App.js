@@ -46,8 +46,8 @@ function App() {
   },[])
 
   return (
-    <div className="bg-gray-800 flex items-center justify-center w-screen h-screen">
-      <div className="flex w-3/4 rounded-3xl shadow-lg m-auto bg-gray-100">
+    <div className="bg-gray-800 flex items-center justify-center w-screen h-screen py-10">
+      <div className="flex w-3/4 min-h-full rounded-3xl shadow-lg m-auto bg-gray-100">
           {/* form card section  */}
         <div className="form-container">
           <div className="flex items-center justify-center">
