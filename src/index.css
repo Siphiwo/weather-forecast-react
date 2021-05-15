@@ -17,3 +17,14 @@ h1 {
     height: auto;
     @apply w-2/4 p-5 rounded-3xl
 }
+
+.alert-notice::after {
+    content:'';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: 2px;
+    margin-top: -3px;
+    @apply animate-ping bg-pink-800
+}
