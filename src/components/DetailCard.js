@@ -11,7 +11,7 @@ function DetailCard({weather_icon, data}) {
                 <img src={weather_icon} className="w-1/4 inline" />
             </p>
             <p className="text-gray-400 text-xs uppercase tracking-widest">{weather[0].description}</p>
-            <p className="tracking-wider">{moment().format("dddd MMM YY")}</p>
+            <p className="tracking-wider">{moment().format("dddd MMM YYYY")}</p>
             </div>
             <div className="my-2 border-l-2 border-gray-100 p-2">
             <p className="text-gray-400 text-lg">RealFeel: {Math.round(main.feels_like)}&deg;C</p>

@@ -1,4 +1,5 @@
 Weather Forcast App
+ - App Idea: https://dribbble.com/shots/14628486-Foreacast-Weather-Website-Design
  - Create 7 cards to display summary of weather
  - Click card to display more information about weather on specific day
  - API key: ba1c264a68aee00bc2a81210b7f10c26
